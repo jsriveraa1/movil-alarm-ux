@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="songs_array">
+        <item>Seleccione</item>
+        <item>Natural</item>
+        <item>Mar</item>
+        <item>Agua</item>
+        <item>Personalizar sonido</item>
+    </string-array>
+</resources>

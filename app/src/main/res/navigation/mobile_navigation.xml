@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/registerPhoneFragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.uniandes.jsra.alarm.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_fragment_options_alarm2"
+            app:destination="@id/fragment_options_alarm" />
+        <action
+            android:id="@+id/action_navigation_home_to_fragmentSearchSong"
+            app:destination="@id/fragmentSearchSong" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.uniandes.jsra.alarm.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.uniandes.jsra.alarm.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/fragment_options_alarm"
+        android:name="com.uniandes.jsra.alarm.ui.optionsalarm.fragment_options_alarm"
+        android:label="Opciones avanzadas"
+        tools:layout="@layout/fragment_fragment_options_alarm" />
+    <fragment
+        android:id="@+id/fragmentSearchSong"
+        android:name="com.uniandes.jsra.alarm.FragmentSearchSong"
+        android:label="Busqueda canciones"
+        tools:layout="@layout/fragment_fragment_search_song" />
+    <fragment
+        android:id="@+id/registerPhoneFragment"
+        android:name="com.uniandes.jsra.alarm.ui.operationsphone.RegisterPhoneFragment"
+        android:label="fragment_register_phone"
+        tools:layout="@layout/fragment_register_phone" >
+        <action
+            android:id="@+id/action_registerPhoneFragment_to_registerCodeFragment"
+            app:destination="@id/registerCodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startAlarm"
+        android:name="com.uniandes.jsra.alarm.ui.start.StartAlarm"
+        android:label="fragment_start_alarm"
+        tools:layout="@layout/fragment_start_alarm" >
+        <action
+            android:id="@+id/action_startAlarm_to_registerPhoneFragment"
+            app:destination="@id/registerPhoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerCodeFragment"
+        android:name="com.uniandes.jsra.alarm.ui.operationsphone.RegisterCodeFragment"
+        android:label="fragment_register_code"
+        tools:layout="@layout/fragment_register_code" >
+        <action
+            android:id="@+id/action_registerCodeFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>
